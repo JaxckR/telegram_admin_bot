@@ -4,11 +4,14 @@ from aiogram.filters import Command
 from aiogram.types import Message
 from dotenv import load_dotenv, find_dotenv
 
+
+# Create .env file and write your api
 load_dotenv(find_dotenv())
 
 bot = Bot(token=os.getenv("TG_API"))
 dp = Dispatcher()
 
+# banwords
 ban_words = ['delete', 'hate', 'goodbye']
 
 @dp.message(Command(commands=['start']))
